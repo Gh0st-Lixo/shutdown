@@ -6,7 +6,6 @@ Digite [ c ] para cancelar um desligamento agendado.
 
 --> ''', end="")
 while (True):
-    
     pergunta = str(input())
     if (pergunta.lower () == "c"):
         os.system ("shutdown -a")
