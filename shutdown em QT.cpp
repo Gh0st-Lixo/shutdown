@@ -19,7 +19,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_lineEdit_returnPressed()//Minutos do Shutdown
 {
     QString entrada = ui->lineEdit->text(); // Armazenando a entrada em uma variavel
-    int multiplicacao = entrada.toInt() * 60;// Convertendo para tipo int com .toint()
+    short int multiplicacao = entrada.toInt() * 60;// Convertendo para tipo int com .toint()
     QString uni = "shutdown -s -t " + QString::number(multiplicacao); //Unindo e convertendo o inteiro para QString com number
     QByteArray final = uni.toLatin1(); // Array de char .tolatin1() para capturar o que tem na outra String
     const char* comando = final.data();// Convertendo para const char*
